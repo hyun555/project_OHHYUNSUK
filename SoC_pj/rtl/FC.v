@@ -1,13 +1,10 @@
-// 11_30 ???? ?? + pe_valid / pe_phase ??
-// 2 clk ?? ??
-
 module FC #(
     parameter INPUT_NUM     = 192,
     parameter OUTPUT_NUM    = 10,
     parameter IN_BITS       = 8,
     parameter W_BITS        = 8,
     parameter ACC_BITS      = 32,
-    parameter OUT_BITS      = 32,   // comparator? ?? ??
+    parameter OUT_BITS      = 32,  
     parameter WE_ADDR_WIDTH = 9     // depth 384 ? addr 0~383
 )(
     input  wire                         clk,
