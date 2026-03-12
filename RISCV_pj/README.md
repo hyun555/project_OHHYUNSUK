@@ -318,9 +318,15 @@ end_loop:
 ```
 ### 2. RISC-V 프로세서 설계
 RV32I 표준 규격에 준수하는 5단계 파이프라인 CPU를 설계한다.
+
 Stage는 IF -> ID -> EX -> MEM -> WB로 구성되며 Hazard 판별, Data Stall 방지를 위한 Forwarding을 구현한다.
+
 lbu 명령어 추가에 따른 로직 수정을 한다.
-[코드](
+
+[코드](RISCV_pj/rtl)
+
+<br><br>
+
 ### 전체 시스템 아키텍처
 <img width="661" height="433" alt="image" src="https://github.com/user-attachments/assets/ce3f8628-1831-44f2-b0da-e4d6d0317838" />
 <br><br>
@@ -361,6 +367,7 @@ report_constraint -all_violators
 
 ### 결과
 1. 주기 및 critical path 경로
+
 critical path : 3.65ns
 
 <img width="408" height="398" alt="image" src="https://github.com/user-attachments/assets/c03dd7bb-e7d4-46bf-9657-1a0e8b224d29" />
@@ -370,7 +377,9 @@ critical path : 3.65ns
 <br><br>
 
 2. 총 전력 및 면적
+   
 Total power : 2.6764e + 03uW
+
 area : 36135
 
 <img width="601" height="434" alt="image" src="https://github.com/user-attachments/assets/b94b508c-00a5-4505-9edb-f764ec2952fb" />
