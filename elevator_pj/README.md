@@ -1,9 +1,8 @@
-# 디지털집적회로모델링 및 실험 프로젝트 1
+# DE2 보드를 사용한 엘리베이터 설계
 
  - 실제 엘리베이터 동작 알고리즘과 동일하게 설계한다.
  - Quartus 툴을 사용하여 설계 후 DE2 보드에 올려 동작을 검증한다.
- - Putty 또는 python GUI 창을 명령 입력 및 현재 상태 출력이 가능하게 한다.
-
+ - Putty 또는 python GUI 창을 명령 입력 및 현재 상태 출력이 가능하게 한다.<br>
 
 ### 1. 기능 개요
 
@@ -76,5 +75,20 @@
 
 ###  <전체 시스템 개요>
   <img width="984" height="638" alt="스크린샷 2025-11-12 205702" src="https://github.com/user-attachments/assets/09dbbdc2-0bbe-4e50-be01-5b3d03f69488" />
-  
+
+### 설계 코드
+
+rtl 파일 내부 구조
+
+ELEVATOR_TOP
+  - U_DB_OPEN : DEBOUNCER.v
+  - U_DB_CLOSE : DEBOUNCER.v
+  - U_FSM : ELEVATOR_FSM.v
+  - U_INTERFACE : ELEVATOR_INTERFACE.v
+     - U_RX : UART_RX.v
+     - U_TX_ERR : UART_TX.v
+     - U_CMD : CMD_PASER.v
+     - U_HEX0 : SEVEN_SEGMENT.v
+     - U_HEX1 : SEVEN_SEGMENT.v
+ 
 
