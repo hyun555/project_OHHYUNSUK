@@ -17,15 +17,11 @@ module requantization (
     output reg        [7:0]   out3          // 8-bit unsigned output 3
 );
 
-    // ----------------------------
     // Stage 1: ReLU + rounding(+64)
-    // ----------------------------
     reg              valid_s1;
     reg signed [21:0] s1_0, s1_1, s1_2, s1_3;
 
-    // ----------------------------
     // Stage 2: shift(>>>7) + clamp
-    // ----------------------------
     wire signed [21:0] q0_w = (s1_0 >>> 7);
     wire signed [21:0] q1_w = (s1_1 >>> 7);
     wire signed [21:0] q2_w = (s1_2 >>> 7);
@@ -47,9 +43,7 @@ module requantization (
             out2      <= 8'd0;
             out3      <= 8'd0;
         end else begin
-            // ----------------------------
             // Stage 1 register
-            // ----------------------------
             valid_s1 <= valid_in;
 
             if (valid_in) begin
@@ -61,9 +55,7 @@ module requantization (
             end
             // valid_in==0이면 s1_*는 don't care/유지 (valid로 구분)
 
-            // ----------------------------
             // Stage 2 register (output)
-            // ----------------------------
             valid_out <= valid_s1;
 
             if (valid_s1) begin
@@ -92,3 +84,4 @@ module requantization (
     end
 
 endmodule
+
