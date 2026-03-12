@@ -68,3 +68,8 @@
      - UP, DOWN 모두 보드의 서로 다른 LED에 지정한다.
 
   <img width="1000" height="674" alt="image" src="https://github.com/user-attachments/assets/8a8dd435-429e-432d-b506-d168cd192e26" />
+
+  <전체 시스템 개요>
+  <img width="984" height="638" alt="스크린샷 2025-11-12 205702" src="https://github.com/user-attachments/assets/09dbbdc2-0bbe-4e50-be01-5b3d03f69488" />
+  
+
