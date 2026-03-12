@@ -80,7 +80,7 @@
 
 rtl 파일 내부 구조
 
-ELEVATOR_TOP
+- ELEVATOR_TOP
   - U_DB_OPEN : DEBOUNCER.v
   - U_DB_CLOSE : DEBOUNCER.v
   - U_FSM : ELEVATOR_FSM.v
