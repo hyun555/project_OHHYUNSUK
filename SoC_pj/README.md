@@ -6,8 +6,11 @@
 
 ### 설계 개요
   목표 : end-to-end 연산 가속기를 설계한다.
+  
   모델 : LeNet-1 on MNIST (28x28 grayscale)
+
   플렛폼 : arty z7-20 보드를 사용
+  
   툴 : Vivado + Vitis <br><br>
 
   CNN 모델
