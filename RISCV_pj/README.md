@@ -208,6 +208,12 @@ done:
 - 한번에 4개의 값을 뽑아서 연산을 진행한다. 연산 진행 방법은 아래 그림처럼 진행한다.
 - 8x8 연산 수행 1001 cycle 소모 => 최대 성능
 
+### 명령어 배열 - 연산 방식
+<img width="1195" height="493" alt="image" src="https://github.com/user-attachments/assets/e0c48aa5-76b5-4cab-a6df-0bc76b6dc0eb" />
+<img width="1194" height="500" alt="image" src="https://github.com/user-attachments/assets/262bf282-7274-451e-a269-67f130030730" />
+<img width="1151" height="522" alt="image" src="https://github.com/user-attachments/assets/6cfce948-8af6-4ce4-9583-2bc081791383" />
+<img width="1126" height="530" alt="image" src="https://github.com/user-attachments/assets/fc26183c-3731-4752-acaa-db340639ac01" />
+
 
 ```assembly
 .text
@@ -311,5 +317,62 @@ end_loop:
         jal  x0, end_loop
 ```
 ### 2. RISC-V 프로세서 설계
+RV32I 표준 규격에 준수하는 5단계 파이프라인 CPU를 설계한다.
+Stage는 IF -> ID -> EX -> MEM -> WB로 구성되며 Hazard 판별, Data Stall 방지를 위한 Forwarding을 구현한다.
+lbu 명령어 추가에 따른 로직 수정을 한다.
+[코드](
+### 전체 시스템 아키텍처
+<img width="661" height="433" alt="image" src="https://github.com/user-attachments/assets/ce3f8628-1831-44f2-b0da-e4d6d0317838" />
+<br><br>
+
+### SDC 파일
+<img width="931" height="400" alt="image" src="https://github.com/user-attachments/assets/b791dcf6-15cb-4087-9b1a-c1114c5686f3" />
+<br><br>
+
+### TCL 코드
+```
+set TOPDESIGN RISCV_CPU
+set RTL_FILES [list "./../rtl/ALU.v" \
+		"./../rtl/ALUDEC.v"\
+		"./../rtl/CONTROLLER.v"\
+		"./../rtl/DATAPATH.v"\
+		"./../rtl/EXTEND.v"\
+		"./../rtl/HAZARD_UNIT.v"\
+		"./../rtl/MAINDEC.v"\
+		"./../rtl/PC.v"\
+		"./../rtl/REGFILE.v"\
+		"./../rtl/${TOPDESIGN}.v"]
+read_file -format verilog ${RTL_FILES}
+current_design ${TOPDESIGN}
+link
+check_design
+source ./sdc/RISCVSINGLE-3.sdc -verbose
+check_timing
+write_file -format ddc -output ./outputs/${TOPDESIGN}_unmapped.ddc
+compile_ultra
+report_constraint -all_violators
+write_file -format verilog -hierarchy -output ./outputs/${TOPDESIGN}_gate.v
+write_file -format ddc -output ./outputs/${TOPDESIGN}_gate.ddc
+write_sdf ./outputs/${TOPDESIGN}_gate.sdf
+report_timing
+report_constraint -all_violators
+```
+<br><br>
 
 ### 결과
+1. 주기 및 critical path 경로
+critical path : 3.65ns
+
+<img width="408" height="398" alt="image" src="https://github.com/user-attachments/assets/c03dd7bb-e7d4-46bf-9657-1a0e8b224d29" />
+
+<img width="502" height="599" alt="image" src="https://github.com/user-attachments/assets/b3bc7abf-745f-4e33-a113-a6c262730d24" />
+
+<br><br>
+
+2. 총 전력 및 면적
+Total power : 2.6764e + 03uW
+area : 36135
+
+<img width="601" height="434" alt="image" src="https://github.com/user-attachments/assets/b94b508c-00a5-4505-9edb-f764ec2952fb" />
+<img width="415" height="464" alt="image" src="https://github.com/user-attachments/assets/f7a21289-a216-4025-93bf-d59ed0f9a963" />
+
