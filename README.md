@@ -5,3 +5,4 @@
 2. SoC_pj               - MNIST CNN 연산 가속기 설계
 3. elevator_pj          - DE2 보드를 사용한 엘리베이터 설계
 4. microelectronic2_pj  - 2단 증폭기 설계
+5. embeded_pj           - STM32, 아두이노로 스마트 우산꽂이 설계
