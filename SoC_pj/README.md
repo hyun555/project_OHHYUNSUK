@@ -65,7 +65,7 @@ arty z7-20보드를 사용하며, Vivado + Vitis 기반으로 설계한다.
 
 ## 주요 결과
    - MNIST 분류 정확도 : 99.6%
-   - PS/PL speedup : 559% 상승
+   - PS/PL speedup : 559배 상승
    - LUT 21%/ BRAM 3%/ DSP 48% 사용
 <img width="1057" height="164" alt="image" src="https://github.com/user-attachments/assets/84880525-ea54-4732-ba97-79154344cc08" />
 <img width="556" height="162" alt="image" src="https://github.com/user-attachments/assets/27217cdf-75b9-4202-8636-f36c5dec49ff" />
