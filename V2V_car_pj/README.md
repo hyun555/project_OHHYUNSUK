@@ -126,5 +126,11 @@ speed          : 현재 속도
 
 
 ## 7. 결과
+https://youtu.be/xVOPx7kzJLI
+https://youtu.be/PH1YxxrE5FU
+https://youtu.be/vHmE5e09IHo
+https://youtu.be/aCbsAGWXq50
 
-시연 영상 : [YouTube 링크](https://youtu.be/영상ID)
+
+
+
