@@ -26,8 +26,8 @@ Nextchip사의 Apache6 탑재 SoM 보드 4대, 랜선, 캡처보드
 
 ## 4. 전체 시스템 개요
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1e979004-939a-4b08-9384-d615650555dc" height="260" alt="시스템 구성도">
-  <img src="https://github.com/user-attachments/assets/25acccf4-ce48-4ebc-afa2-5185ee0808f7" height="260" alt="동작 흐름">
+  <img src="https://github.com/user-attachments/assets/1e979004-939a-4b08-9384-d615650555dc" height="300" alt="시스템 구성도">
+  <img src="https://github.com/user-attachments/assets/25acccf4-ce48-4ebc-afa2-5185ee0808f7" height="300" alt="동작 흐름">
 </p>
 1. 개별 차량은 영상 정보를 기반으로 앞 차량과의 거리, 급정지 유무를 판단한다.
 2. 차량들은 서로의 상태 정보를 공유한다.
@@ -81,8 +81,8 @@ speed          : 현재 속도
 - Qt에서 버튼을 누르면 `serial_gui.c`가 시리얼로 1글자(L, l, R, r, E, e)를 받아 event_type으로 변환해 전역 변수에 저장한다. 보드는 이 값을 자기 판단에 사용함과 동시에 다른 차량으로 보내는 `V2VEventMsg`의 `event_type`에 실어 보낸다.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/13437665-77c9-4b23-992f-11d1dd898548" height="260" alt="Qt GUI">
-  <img src="https://github.com/user-attachments/assets/bfad26ab-2dee-4d5d-95df-40ed59677dae" height="260" alt="시리얼 처리">
+  <img src="https://github.com/user-attachments/assets/13437665-77c9-4b23-992f-11d1dd898548" height="300" alt="Qt GUI">
+  <img src="https://github.com/user-attachments/assets/bfad26ab-2dee-4d5d-95df-40ed59677dae" height="300" alt="시리얼 처리">
 </p>
 
 ### 3) Topology 처리
