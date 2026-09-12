@@ -4,7 +4,7 @@
 1. [SoC_pj](SoC_pj) - MNIST CNN 연산 가속기 설계 (Arty Z7-20)
    - README : 설계 개요 및 결과
    - rtl : 전체 Verilog 코드
-   - CNN Acceleration System design pj.pdf : 8페이지 요약 보고서
+   - CNN Acceleration System design pj.pdf : 원본 보고서
 
 2. [RISCV_pj](RISCV_pj) - GEMM 8x8 연산용 RISC-V 프로세서 설계
    - README : 설계 조건, 어셈블리 수정 전후, 합성 결과
