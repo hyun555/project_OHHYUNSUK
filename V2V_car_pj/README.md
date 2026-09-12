@@ -80,8 +80,10 @@ speed          : 현재 속도
 - Qt 수동 입력은 차량 운전자의 수동 제어를 표현한다.
 - Qt에서 버튼을 누르면 `serial_gui.c`가 시리얼로 1글자(L, l, R, r, E, e)를 받아 event_type으로 변환해 전역 변수에 저장한다. 보드는 이 값을 자기 판단에 사용함과 동시에 다른 차량으로 보내는 `V2VEventMsg`의 `event_type`에 실어 보낸다.
 
-![Qt GUI](images/qt_gui.png)
-![시리얼 처리](images/serial_flow.png)
+<p align="center">
+<img width="1884" height="1011" alt="image (3)" src="https://github.com/user-attachments/assets/13437665-77c9-4b23-992f-11d1dd898548" />
+<img width="872" height="457" alt="image (4)" src="https://github.com/user-attachments/assets/bfad26ab-2dee-4d5d-95df-40ed59677dae" />
+</p>
 
 ### 3) Topology 처리
 
