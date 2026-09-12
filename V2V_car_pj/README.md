@@ -15,8 +15,10 @@
 ## 3. 준비물
 
 Nextchip사의 Apache6 탑재 SoM 보드 4대, 랜선, 캡처보드
-<img width="2031" height="2219" alt="20260810_144816" src="https://github.com/user-attachments/assets/1251a075-f8aa-4372-896f-2b4056917006" />
-<img width="4000" height="3000" alt="20260810_125014" src="https://github.com/user-attachments/assets/001fabf0-bcf8-4f59-94f0-cb566cd4addc" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1251a075-f8aa-4372-896f-2b4056917006" height="320" alt="보드 사진 1">
+  <img src="https://github.com/user-attachments/assets/001fabf0-bcf8-4f59-94f0-cb566cd4addc" height="320" alt="보드 사진 2">
+</p>
 
 
 
