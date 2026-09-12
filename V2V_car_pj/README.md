@@ -15,16 +15,18 @@
 ## 3. 준비물
 
 Nextchip사의 Apache6 탑재 SoM 보드 4대, 랜선, 캡처보드
-![Uploading 20260810_144816.jpg…]()
-![Uploading 20260810_125014.jpg…]()
+<img width="2031" height="2219" alt="20260810_144816" src="https://github.com/user-attachments/assets/1251a075-f8aa-4372-896f-2b4056917006" />
+<img width="4000" height="3000" alt="20260810_125014" src="https://github.com/user-attachments/assets/001fabf0-bcf8-4f59-94f0-cb566cd4addc" />
+
 
 
 
 
 ## 4. 전체 시스템 개요
+<img width="2476" height="1193" alt="image (2)" src="https://github.com/user-attachments/assets/1e979004-939a-4b08-9384-d615650555dc" />
+<img width="717" height="388" alt="스크린샷 2026-08-05 163855" src="https://github.com/user-attachments/assets/25acccf4-ce48-4ebc-afa2-5185ee0808f7" />
 
-![시스템 구성도](images/system_overview.png)
-![동작 흐름](images/flow.png)
+
 
 1. 개별 차량은 영상 정보를 기반으로 앞 차량과의 거리, 급정지 유무를 판단한다.
 2. 차량들은 서로의 상태 정보를 공유한다.
