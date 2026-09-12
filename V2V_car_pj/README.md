@@ -119,6 +119,11 @@ speed          : 현재 속도
 - 별도 보드(vehicle_id 100)가 카메라 영상에서 날씨(맑음, 야간, 야간 우천)와 전방 혼잡도(원활, 보통, 혼잡, 정체)를 분석한다.
 - 분석 결과를 차량과 같은 48byte 구조체에 실어 모든 차량에 주기적으로 보낸다. 이때 brake 필드에 날씨, lane 필드에 혼잡도 값을 넣고 나머지 필드는 사용하지 않는다.
 - 차량은 id 100에서 온 메시지를 차량 판단 로직에 넣지 않고 최고 속도 상한 계수로만 사용한다. 날씨 계수(맑음 1.0, 야간 0.9, 우천 0.6)와 혼잡도 계수(원활 1.0, 보통 0.9, 혼잡 0.6, 정체 0.3)를 곱해 상한을 정하고, 현재 속도가 상한을 넘으면 상한으로 제한한다.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/db8e3f8b-8b11-4f1a-bb99-c0d745509efc" height="280" alt="결과 1">
+  <img src="https://github.com/user-attachments/assets/23c4ceaf-a4b0-4542-a0ce-8b6a6120e724" height="280" alt="결과 2">
+</p>
+
 
 ## 7. 결과
 
