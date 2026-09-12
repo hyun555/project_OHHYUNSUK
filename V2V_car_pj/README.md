@@ -127,16 +127,28 @@ speed          : 현재 속도
 
 ## 7. 결과
 Qt 입력 - SoS 입력 상황에 따른 동작 제어 및 주변 차량 동작 제어
+
 https://youtu.be/xVOPx7kzJLI
 
+
+
 Qt 입력 - 옆 차선으로 차선 변경 입력 시 주변 차량 없는 상황 -> 3초 뒤 차선 변경
+
 https://youtu.be/PH1YxxrE5FU
 
+
+
 차선 변경 시 주변 차량을 먼저 양보 해야 하는 상황
+
 https://youtu.be/vHmE5e09IHo
 
+
+
 날씨 및 혼잡도에 따른 속도 제한 
+
 https://youtu.be/aCbsAGWXq50
+
+
 
 
 
